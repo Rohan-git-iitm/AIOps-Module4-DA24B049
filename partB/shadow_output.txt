@@ -1,0 +1,5 @@
+requests sent to each server : 200
+(i)   mean |prod - cand|       : 9.48 min
+(ii)  share differing > 10 min : 35.0%
+(iii) p95 latency prod (5101)  : 3.6 ms
+      p95 latency cand (5102)  : 3.5 ms

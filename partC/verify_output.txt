@@ -1,0 +1,19 @@
+INFO 2026-11-07 18:25:07,715 serve 5252 -- Started Serve in namespace "serve".
+INFO 2026-11-07 18:25:07,730 serve 5252 -- Connecting to existing Serve app in namespace "serve". New http_options/controller_options will not be applied.
+INFO 2026-11-07 18:25:10,857 serve 5252 -- Application 'eta' is ready at http://127.0.0.1:8100/.
+INFO 2026-11-07 18:25:23,423 serve 5252 -- Deleting app ['eta']
+INFO 2026-11-07 18:25:26,452 serve 5252 -- Connecting to existing Serve app in namespace "serve". New http_options/controller_options will not be applied.
+INFO 2026-11-07 18:25:29,572 serve 5252 -- Application 'eta' is ready at http://127.0.0.1:8100/.
+INFO 2026-11-07 18:25:33,422 serve 5252 -- Connecting to existing Serve app in namespace "serve". New http_options/controller_options will not be applied.
+INFO 2026-11-07 18:25:37,442 serve 5252 -- Application 'eta' is ready at http://127.0.0.1:8100/.
+Ray cluster resources: 2.0 CPU
+deployments: {'EtaModelV1': {'RUNNING': 2}, 'EtaModelV2': {'RUNNING': 1}, 'Router': {'RUNNING': 1}}
+CPU reserved by the app: 0.85 of 2 (router 0.1 + v1 2x0.25 + v2 1x0.25 at min)
+router resp sample: {'predictions': [103.9], 'model_version': 'v2', 'served_by': 't3jtj5fx', 'arm': 'v2'}
+(a) weight=0.2: 20.3% of 1000 customers on v2 (allowed 16.0%-24.0%)
+(b) second call: 200/200 customers kept their arm
+(c) after delete + redeploy: 200/200 customers kept their arm
+(d) weight=0.5: 51.3% on v2; 203 former v2 customers, 0 moved back to v1; 310 v1 customers newly moved to v2
+(e) X-Beta: 1 on 50 requests from v1 customers -> 50/50 served by v2
+final deployments: {'EtaModelV1': {'RUNNING': 2}, 'EtaModelV2': {'RUNNING': 1}, 'Router': {'RUNNING': 1}}
+ALL CHECKS PASSED

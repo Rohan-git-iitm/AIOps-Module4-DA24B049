@@ -1,0 +1,81 @@
+### default thresholds
+{
+  "thresholds": "defaults",
+  "prod": {
+    "mae": 11.955,
+    "mae_rush": 19.68,
+    "mae_rain": 11.623,
+    "p95_ms": 1.232
+  },
+  "candidate": {
+    "mae": 6.105,
+    "mae_rush": 8.58,
+    "mae_rain": 6.285,
+    "p95_ms": 1.174
+  },
+  "criteria": {
+    "mae_rel_gain": {
+      "value": 0.4894,
+      "need": ">= 0.03",
+      "pass": true
+    },
+    "p95_ms": {
+      "value": 1.174,
+      "need": "<= 10.0",
+      "pass": true
+    },
+    "rush_regression": {
+      "value": -0.564,
+      "need": "<= 0.05",
+      "pass": true
+    },
+    "rain_regression": {
+      "value": -0.4592,
+      "need": "<= 0.05",
+      "pass": true
+    }
+  },
+  "promote": true
+}
+
+### min_rel_gain=0.60
+{
+  "thresholds": {
+    "min_rel_gain": 0.6
+  },
+  "prod": {
+    "mae": 11.955,
+    "mae_rush": 19.68,
+    "mae_rain": 11.623,
+    "p95_ms": 1.344
+  },
+  "candidate": {
+    "mae": 6.105,
+    "mae_rush": 8.58,
+    "mae_rain": 6.285,
+    "p95_ms": 1.215
+  },
+  "criteria": {
+    "mae_rel_gain": {
+      "value": 0.4894,
+      "need": ">= 0.6",
+      "pass": false
+    },
+    "p95_ms": {
+      "value": 1.215,
+      "need": "<= 10.0",
+      "pass": true
+    },
+    "rush_regression": {
+      "value": -0.564,
+      "need": "<= 0.05",
+      "pass": true
+    },
+    "rain_regression": {
+      "value": -0.4592,
+      "need": "<= 0.05",
+      "pass": true
+    }
+  },
+  "promote": false
+}

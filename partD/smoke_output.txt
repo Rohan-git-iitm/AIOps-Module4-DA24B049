@@ -1,0 +1,8 @@
+[PASS] healthz: {"status":"ok","model_version":"v1"}
+[PASS] version + prediction shape: model_version=v1 (expected v1), predictions=[21.1, 90.7, 245.4]
+[PASS] sanity: longer distance never gives a shorter ETA: distance_km=[2, 10, 40, 120] -> [18.5, 39.1, 116.5, 322.8]
+[PASS] sanity: heavier traffic never gives a shorter ETA: traffic_index=[0.0, 0.3, 0.6, 0.9] -> [52.1, 64.9, 77.7, 90.6]
+[PASS] sanity: more stops never give a shorter ETA: n_stops=[1, 5, 10, 20] -> [47.6, 64.9, 86.5, 129.8]
+[PASS] invalid input -> 422: HTTP 422
+[PASS] latency p95: p95=2.6 ms over 30 requests (limit 80.0)
+SMOKE TEST PASSED (7/7 checks)

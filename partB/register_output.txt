@@ -1,0 +1,4 @@
+| version | alias | model_version |
+|---|---|---|
+| 1 | prod | v1 |
+| 2 | candidate | v2 |
